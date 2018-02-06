@@ -33,8 +33,7 @@
 }
 
 .mainImage {
-  max-width: 728;
-  /* width:100%; */
+  width: 65%;
   object-fit: contain;
   align-self: flex-start;
 }
