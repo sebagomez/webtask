@@ -23,19 +23,26 @@ var appRouter = function(app) {
 
 		console.log('asked for car ' + carId);
 
-		let data = {};
+		let car = {};
+		let images = [];
 		db.get("SELECT * FROM Car WHERE Id = ?", [carId], function(err, row) {
 			if (err){
 				console.log(err);
 				res.status(500).send(err);
 				return;
 			}
-			if (row)
-				res.send(row);
-			else
-				res.status(404).send({});
+
+			car = row;
+			if (!row)
+				return res.status(404).send({});
+			
+			db.all("SELECT ImageUrl FROM CarImage WHERE CarId = ?", [carId], function(err, row) {
+			
+			images = row.map( i => i.ImageUrl);
+			res.send({ 'car': car, 'images': images});
 			
 		});
+	});
 	});
 
 }

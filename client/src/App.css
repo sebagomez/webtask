@@ -26,3 +26,40 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.header {
+  background-color: black;
+  height: 56px;
+}
+
+.mainImage {
+  max-width: 728;
+  /* width:100%; */
+  object-fit: contain;
+  align-self: flex-start;
+}
+
+h4{
+  font-family: 'Helvetica';
+  font-style: bold;
+  font-size: 18px; 
+}
+
+.smallLabel{
+  color: #9B9B9B;
+  font-size: 12px;   
+}
+
+.greenh4{
+  color: #106838;
+}
+
+.flexMain{
+  display: flex;
+  flex-direction: row;
+}
+
+.stats{
+  display: flex;
+  justify-content: space-between;
+}

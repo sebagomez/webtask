@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import MainImage from './MainImage';
+import CarData from './CarData';
 
 class CarDetail extends Component {
 
 	state = {
-		car: {}
+		car: {},
+		selectedImage: ''
 	}
 
 	static propTypes = {
@@ -18,7 +20,7 @@ class CarDetail extends Component {
 		//https://davidwalsh.name/fetch
 		var request = new Request('http://localhost:3003/car/' + this.props.carId, {
 			method: 'get',
-			headers: new Headers({ 'Content-Type': 'application/json' }, {'Access-Control-Allow-Origin':'http://localhost:3000'})
+			headers: new Headers({ 'Content-Type': 'application/json' })
 			}
 		);
 
@@ -26,8 +28,7 @@ class CarDetail extends Component {
 		fetch(request).then(function(response) {
 			return response.json();
 		}).then(function (j){
-			debugger;
-			that.setState({ car: j});
+			that.setState({ car: j, selectedImage: j.images[0]});
 		}).catch(function(err) {
 			// Error :(
 			debugger;
@@ -35,9 +36,16 @@ class CarDetail extends Component {
 	}
 
 	render() {
-	  return (
+		if (!this.state.car.car)
+			return (<div>No car selected :( </div>);
+
+		return (
 			<div>
-				<h1>Car {this.props.carId} is a {this.state.car.Brand ? this.state.car.Brand : 'N/A'} {this.state.car.Model ? this.state.car.Model : 'N/A'}</h1>
+				<div className="header"></div>
+				<div className="flexMain">
+					<MainImage imageUrl={this.state.selectedImage}/>
+					<CarData car={this.state.car.car}/>
+				</div>
 			</div>
 	  );
 	}
