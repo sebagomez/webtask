@@ -32,10 +32,10 @@
   height: 56px;
 }
 
+
+
 .mainImage {
-  width: 65%;
-  object-fit: contain;
-  align-self: flex-start;
+  width: 100%;
 }
 
 h4{
@@ -53,12 +53,11 @@ h4{
   color: #106838;
 }
 
-.flexMain{
-  display: flex;
-  flex-direction: row;
-}
-
 .stats{
   display: flex;
   justify-content: space-between;
+}
+
+.inverted{
+  color:white;
 }
