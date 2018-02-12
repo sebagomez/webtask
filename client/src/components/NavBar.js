@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Grid, Nav, Navbar, NavItem, Row, Col } from 'react-bootstrap';
+
 
 
 class NavBar extends Component {
 
+	onItemClick(){
+		alert("Coming soon!");
+	}
+
 	render() {
 		return (
-		<div>
-			<nav className="navbar navbar-inverse">
-				<div className="navbar-right">
-					<span className="inverted glyphicon glyphicon-download"></span>
-					<i className="glyphicon glyphicon-home"></i>
+				<div className="header">
+					<div className="headerItem searchBox hideMobile" onClick={this.onItemClick}><span className="navIcon glyphicon glyphicon-search" aria-hidden="true"></span></div>
+					<div className="headerItem" onClick={this.onItemClick}><span className="navIcon glyphicon glyphicon-map-marker" aria-hidden="true"></span></div>
+					<div className="headerItem" onClick={this.onItemClick}><span className="navIcon glyphicon glyphicon-phone" aria-hidden="true"></span></div>
+					<div className="headerItem hideMobile" onClick={this.onItemClick}><span className="navIcon glyphicon glyphicon-info-sign" aria-hidden="true"></span></div>
 				</div>
-			</nav>
-		</div>);
+		);
 	}
 }
 

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col, Clearfix } from 'react-bootstrap';
 
 
 class CarData extends Component {
 
 	render() {
 		return (
-			<div>
-				<Grid>
+				 <Grid className="">
 					<Row className="show-grid">
 						<Col xs={12} md={12} sm={12} lg={12}>
 							<h1>{this.props.car.Brand} {this.props.car.Model}</h1>
@@ -54,8 +53,8 @@ class CarData extends Component {
 							<h4 className="greenh4">15</h4>
 						</Col>
 					</Row>
-				</Grid>
-			</div>);
+				</Grid> 
+			);
 	}
 }
 

@@ -30,12 +30,38 @@
 .header {
   background-color: black;
   height: 56px;
+  display: flex;
+  justify-content: flex-end;
 }
 
+.searchBox{
+  background-color: black !important;
+}
 
+.headerItem{
+  background-color: orange;
+  color:white;
+  height: 100%;
+  width: 56px;
+}
+
+.navIcon{
+  top: 20px;
+  right: -20px;
+}
+
+.brokenGrid{
+  width: 100%;
+}
+
+.imgParent{
+  text-align: right;
+}
 
 .mainImage {
   width: 100%;
+  max-width: 728px;
+  max-height: 432px;
 }
 
 h4{
@@ -60,4 +86,71 @@ h4{
 
 .inverted{
   color:white;
+}
+
+.performance{
+  border: 16px;
+  border-style: solid;
+  border-color: #EFEFF2;
+}
+
+.gridImage{
+  cursor: pointer;
+}
+
+.wideButton{
+  border-top: 8px;
+  border-top-style: solid;
+  border-top-color: #EFEFF2;
+  width: 100%;
+}
+
+.debug{
+  background-color: red;
+  color: white;
+}
+
+/* 768 is bootstrap's xs */
+@media only screen and (max-width: 768px) {
+
+  .hideMobile {
+    display: none;
+  }
+
+  .footer{
+    background-color: black;
+    height: 56px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .performance{
+    border-top: 8px;
+    border-bottom: 8px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #EFEFF2;
+        
+    border-left: none;
+    border-right: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .footer {
+    display: none;
+  }
+}
+
+/* HACK! I believe react-bootstrap has a bug */
+.container{
+  width: 100%;
+}
+
+.lineRow{
+  margin-top:0;
+  margin-bottom: 0;
 }

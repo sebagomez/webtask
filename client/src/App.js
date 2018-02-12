@@ -6,7 +6,7 @@ import CarDetails from './components/CarDetails';
 class App extends Component {
 
   render() {
-    return <CarDetails carId="1"/>;
+    return <CarDetails carId="1" />;
   }
 }
 
