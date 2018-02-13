@@ -73,7 +73,7 @@ class CarDetail extends Component {
 					</Row>
 					<Row className="show-grid">
 						<Col xs={12} mdHidden={true} smHidden={true} lgHidden={true}>
-							<Button className="wideButton" bsStyle="success">CALL US</Button>
+							<button className="wideButton"><b>CALL US</b></button>
 						</Col>
 					</Row>					
 					<Row className="show-grid">

@@ -16,11 +16,11 @@ class CarData extends Component {
 					<Row className="show-grid">
 						<Col xs={6} md={12} sm={12} lg={12}>
 							<h4 className="smallLabel">Year</h4>
-							<div>{this.props.car.Year}</div>
+							<h4>{this.props.car.Year}</h4>
 							<h4 className="smallLabel">Price Range</h4>
-							<div>${this.props.car.MinPrice} - ${this.props.car.MaxPrice}</div>
+							<h4>${this.props.car.MinPrice} - ${this.props.car.MaxPrice}</h4>
 							<h4 className="smallLabel">Mileage</h4>
-							<div>${this.props.car.Mileage} miles</div>
+							<h4>${this.props.car.Mileage} miles</h4>
 						</Col>
 						<Col xs={6} mdHidden={true} smHidden={true} lgHidden={true}>
 							<Row className="show-grid">

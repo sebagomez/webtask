@@ -20,7 +20,8 @@ var appRouter = function (app) {
 	app.get("/images/:image", function (req, res) {
 		var image = req.params.image;
 		let imagePath = path.join(__dirname, '/../images/' + image);
-		console.log('Returning image:' + imagePath);
+		
+		//console.log('Returning image:' + imagePath);
 		
 		res.header("Content-Type", "image/jpeg");
 
@@ -33,7 +34,7 @@ var appRouter = function (app) {
 
 		res.header("Content-Type", "application/json");
 		
-		console.log('Car ' + carId + ' requested');
+		//console.log('Car ' + carId + ' requested');
 
 		let car = {};
 		let images = [];

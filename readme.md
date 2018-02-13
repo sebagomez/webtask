@@ -2,7 +2,7 @@
 
 This solution contains two projects, one for the server and one for the client.
 
-## Server ##
+### Server ###
 
 The server project is a [NodeJS](https://nodejs.org) web app using [Express](http://expressjs.com/) web framework.
 
@@ -14,16 +14,16 @@ The data is saved on a [SQLite](http://sqlite.org/) database at the root of the 
 
 The images for the cars are stored in the file system under the `images` folder.
 
-## Client ##
+### Client ###
 
 The client is a [ReactJS](https://reactjs.org/) app created with the [Create React App](https://www.npmjs.com/package/create-react-app) npm package. It also uses [React-Bootstrap](https://react-bootstrap.github.io/) in order to easily work with adaptable components and their layouts.
 
 ![img](TCWebTask.gif)
 
-## Install ## 
+### Install ### 
 
 `npm install` from the root of each project to install the dependencies.
 
-To start the web server open a terminal window, go to the server folder and just type `node app.js`
+`node app.js` from the root of the server project (server/) to start the server app
 
-To start the client open a terminal window, go to the client folder and just type `npm start`
+`npm start` from the rrot of the client project (client/) to start the client app
