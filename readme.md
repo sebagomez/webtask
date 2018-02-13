@@ -4,7 +4,7 @@ This solution contains two projects, one for the server and one for the client.
 
 ## Server ##
 
-The [server](\server) project is a [NodeJS](https://nodejs.org) web app using [Express](http://expressjs.com/) web framework.
+The server project is a [NodeJS](https://nodejs.org) web app using [Express](http://expressjs.com/) web framework.
 
 It serves two types of requests:  
 `/car/:carId` returns a json with the stores information about a car, with its images.  
@@ -22,6 +22,7 @@ The client is a [ReactJS](https://reactjs.org/) app created with the [Create Rea
 
 ## Install ## 
 
+`npm install` from the root of each project to install the dependencies.
 
 To start the web server open a terminal window, go to the server folder and just type `node app.js`
 
